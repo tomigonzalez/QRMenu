@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: CanvasText;
+  background-color: Canvas;
+}
+
+body {
+  background: repeating-linear-gradient(
+      transparent,
+      transparent 25px,
+      #edeeef 25px,
+      #edeeef 37.5px,
+      transparent 37.5px,
+      transparent 50px,
+      #edeeef 37.5px,
+      #edeeef 100px,
+      transparent 100px,
+      transparent 112.5px,
+      #edeeef 112.5px,
+      #edeeef 125px,
+      transparent 125px,
+      transparent 200px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 25px,
+      #edeeef 25px,
+      #edeeef 37.5px,
+      transparent 37.5px,
+      transparent 50px,
+      #edeeef 37.5px,
+      #edeeef 100px,
+      transparent 100px,
+      transparent 112.5px,
+      #edeeef 112.5px,
+      #edeeef 125px,
+      transparent 125px,
+      transparent 200px
+    ),
+    #ffffff;
+  background-blend-mode: multiply;
+  background-color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 4.5rem;
+  font-weight: bolder;
+}
+h3 {
+  font-size: 4.5rem;
+  font-weight: bolder;
+}
+h4 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+h5 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.titlemenu h1,
+.titlemenu h2,
+.titlemenu h3,
+h4,
+h5 {
+  line-height: 1;
+}
+
+.gray p {
+  color: #626262;
+}
