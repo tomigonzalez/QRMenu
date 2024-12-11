@@ -24,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`container m-auto grid min-h-screen grid-rows-[auto,1fr,auto] overflow-x-clip  ${inter.className}`}
+        className={`m-auto min-h-screen  overflow-x-clip  ${inter.className}`}
       >
-        <span className="absolute bottom-5 right-[-35rem] h-[90rem] w-[80rem] rounded-full bg-[#60B059]" />
-
+        <span className="absolute flex z-10 bottom-5 right-[-35rem] 2xl:h-[80rem] 2xl:w-[80rem] xl:h-[65rem] xl:w-[65rem] lg:h-[60rem] lg:w-[60rem] md:h-[60rem] md:w-[60rem]   rounded-full bg-[#60B059]" />
         <Header />
+
         <main>{children}</main>
         <Footer />
       </body>
