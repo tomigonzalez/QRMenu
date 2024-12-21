@@ -9,8 +9,8 @@ export default function Header() {
       <div>
         <Button
           color="lg:bg-white lg:text-black"
-          otroColor="bg-[#4CAF50] text-white"
           href="/"
+          otroColor="bg-[#4CAF50] text-white"
           text="Iniciar sesion"
         />
       </div>

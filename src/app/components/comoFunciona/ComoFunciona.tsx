@@ -15,7 +15,7 @@ export default function ComoFunciona() {
       </div>
 
       {/* Contenido principal */}
-      <div className="flex w-full flex-col items-center md:gap-[4rem] bg-[#4CAF50]">
+      <div className="flex w-full flex-col items-center bg-[#4CAF50] md:gap-[4rem]">
         {/* Título */}
         <h4 className="relative text-center text-2xl font-bold text-white sm:text-3xl">
           ¿Cómo funciona?
@@ -28,8 +28,8 @@ export default function ComoFunciona() {
             {/* Primer paso */}
             <div className="flex w-full flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl md:w-2/5">
               <div className="w-full px-4 text-center md:text-left">
-                <h5 className="text-lg font-semibold">Regístrate</h5>
-                <p className="text-sm text-gray-600">
+                <h5 className="text-lg font-semibold  pb-2">Regístrate</h5>
+                <p className="text-sm text-gray-600 pb-2">
                   Crea tu cuenta en pocos pasos.
                 </p>
               </div>
@@ -44,10 +44,10 @@ export default function ComoFunciona() {
             {/* Segundo paso */}
             <div className="flex w-full md:w-3/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
               <div className="w-full px-4 text-center md:text-left">
-                <h5 className="text-lg font-semibold">
+                <h5 className="text-lg font-semibold pb-2">
                   Crea y personaliza tu menú
                 </h5>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 pb-2">
                   Elige una plantilla, sube tu logo y edita fácilmente los
                   detalles de tu menú.
                 </p>
@@ -59,12 +59,14 @@ export default function ComoFunciona() {
           {/* Segunda fila */}
           <div className="flex flex-col gap-6 md:flex-row">
             {/* Dos pasos pequeños */}
-            <div className="flex w-full md:w-3/5 flex-col gap-6">
+            <div className="flex w-full flex-col gap-6 md:w-3/5">
               {/* Revisa y guarda */}
               <div className="flex flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
                 <div className="w-full px-4 text-center md:text-left">
-                  <h5 className="text-lg font-semibold">Revisa y guarda</h5>
-                  <p className="text-sm text-gray-600">
+                  <h5 className="pb-2 text-lg font-semibold">
+                    Revisa y guarda
+                  </h5>
+                  <p className="text-sm text-gray-600 pb-2">
                     Previsualiza tu menú para asegurarte de que todo esté
                     correcto y guárdalo.
                   </p>
@@ -80,8 +82,8 @@ export default function ComoFunciona() {
               {/* Genera tu QR */}
               <div className="flex flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
                 <div className="w-full px-4 text-center md:text-left">
-                  <h5 className="text-lg font-semibold">Genera tu QR</h5>
-                  <p className="text-sm text-gray-600">
+                  <h5 className="pb-2 text-lg font-semibold">Genera tu QR</h5>
+                  <p className="text-sm text-gray-600 pb-2">
                     Obtén un código QR único para compartir tu menú con tus
                     clientes.
                   </p>
@@ -98,10 +100,10 @@ export default function ComoFunciona() {
             {/* Paso final */}
             <div className="flex w-full md:w-2/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
               <div className="w-full px-4 text-center md:text-left">
-                <h5 className="text-lg font-semibold">
+                <h5 className="text-lg font-semibold pb-2">
                   Comparte con tus clientes
                 </h5>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 pb-2">
                   Coloca el QR en tus mesas, redes sociales o web. Tus clientes
                   podrán escanearlo y ver el menú al instante.
                 </p>

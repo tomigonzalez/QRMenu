@@ -14,8 +14,7 @@ export default function Button({
   href,
 }: ButtonProps) {
   const buttonClasses = `
-    ${color} ${otroColor}
-    
+    ${otroColor}
     px-4 py-2 
     rounded-lg 
     cursor-pointer

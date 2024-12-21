@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="flex w-full bg-[#4CAF50] rounded-xl flex-col items-center justify-center mt-20 pl-10 pr-10">
       <Image alt="" height={150} src="/img/logowhite.svg" width={150} />
-      <div className="w-full flex flex-row justify-around pb-10 pt-10">
+      <div className="w-full flex md:flex-row flex-col text-center items-center justify-around pb-10 pt-10">
         <ul className="flex flex-row gap-6 font-bold">
           <li className="text-[#ffff] hover:text-black cursor-pointer transition-colors duration-200">
             Home
