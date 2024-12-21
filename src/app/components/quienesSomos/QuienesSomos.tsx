@@ -2,8 +2,8 @@
 export default function QuienesSomos() {
   return (
     <section className="flex w-full flex-col items-center">
-      <h4 className="mt-20 text-black">¿Por qué elegir QRMenu?</h4>
-      <div className="mt-12 flex w-3/5 flex-col gap-4">
+      <h4 className="mt-20 text-black">¿Quienes somos?</h4>
+      <div className="lg:mt-12 mt-6 flex text-center w-4/5 lg:text-left lg:w-3/5 flex-col gap-4">
         <p className="p-0">
           Somos más que una herramienta; somos tu aliado en el proceso de
           digitalización. Nuestro equipo trabaja todos los días para simplificar

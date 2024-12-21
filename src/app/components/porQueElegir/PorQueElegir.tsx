@@ -64,7 +64,7 @@ function PorQueElegir() {
                   />
                 </summary>
                 <div className="details-content-wrapper p-4">
-                  <h5 className="font-bold">{title}</h5>
+                  <h5 className="font-bold text-2xl">{title}</h5>
                   <p className="text-xl">{description}</p>
                 </div>
               </details>

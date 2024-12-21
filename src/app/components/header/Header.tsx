@@ -8,7 +8,7 @@ export default function Header() {
       <Image alt="" height={150} src="/img/logo.png" width={150} />
       <div>
         <Button
-          color="md:bg-white md:text-black"
+          color="lg:bg-white lg:text-black"
           otroColor="bg-[#4CAF50] text-white"
           href="/"
           text="Iniciar sesion"

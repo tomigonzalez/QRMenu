@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function ComoFunciona() {
   return (
     <section className="relative">
+      {/* SVG de arriba */}
       <div className="relative top-1 rotate-180">
         <svg
           fill="#4CAF50"
@@ -12,74 +13,111 @@ export default function ComoFunciona() {
           <path d="M0 0v4s250 96 500 96 500-96 500-96V0H0Z" />
         </svg>
       </div>
-      <div className="flex w-full flex-col items-center bg-[#4CAF50]">
-        <h4 className="relative bottom-14 text-white">¿Como funciona ?</h4>
-        <div className="gray mb-10 mt-2 flex h-full w-2/3 flex-col items-center gap-6">
-          <div className="flex w-full flex-row gap-6">
-            <div className="flex w-2/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
-              <div className="w-full pl-6 pr-6">
-                <h5>Registrate</h5>
-                <p>Crea tu cuenta en pocos pasos </p>
+
+      {/* Contenido principal */}
+      <div className="flex w-full flex-col items-center md:gap-[4rem] bg-[#4CAF50]">
+        {/* Título */}
+        <h4 className="relative text-center text-2xl font-bold text-white sm:text-3xl">
+          ¿Cómo funciona?
+        </h4>
+
+        {/* Contenido central */}
+        <div className="gray mb-10 mt-2 flex w-11/12 flex-col items-center gap-6 sm:w-3/4">
+          {/* Primera fila */}
+          <div className="flex w-full flex-col gap-6 md:flex-row">
+            {/* Primer paso */}
+            <div className="flex w-full flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl md:w-2/5">
+              <div className="w-full px-4 text-center md:text-left">
+                <h5 className="text-lg font-semibold">Regístrate</h5>
+                <p className="text-sm text-gray-600">
+                  Crea tu cuenta en pocos pasos.
+                </p>
               </div>
-              <Image alt="" height={90} src="/img/registro1.png" width={90} />
+              <Image
+                alt="Registro"
+                height={90}
+                src="/img/registro1.png"
+                width={90}
+              />
             </div>
-            <div className="flex w-3/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
-              <div className="w-full pl-6 pr-6">
-                <h5>Crea y personaliza tu menú</h5>
-                <p>
+
+            {/* Segundo paso */}
+            <div className="flex w-full md:w-3/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
+              <div className="w-full px-4 text-center md:text-left">
+                <h5 className="text-lg font-semibold">
+                  Crea y personaliza tu menú
+                </h5>
+                <p className="text-sm text-gray-600">
                   Elige una plantilla, sube tu logo y edita fácilmente los
                   detalles de tu menú.
                 </p>
               </div>
-              <Image alt="" height={90} src="/img/menu1.png" width={90} />
+              <Image alt="Menú" height={90} src="/img/menu1.png" width={90} />
             </div>
           </div>
-          <div className="flex flex-row gap-6">
-            <div className="flex w-3/5 flex-col gap-6">
+
+          {/* Segunda fila */}
+          <div className="flex flex-col gap-6 md:flex-row">
+            {/* Dos pasos pequeños */}
+            <div className="flex w-full md:w-3/5 flex-col gap-6">
+              {/* Revisa y guarda */}
               <div className="flex flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
-                <div className="w-full pl-6 pr-6">
-                  <h5>Revisa y guarda</h5>
-                  <p>
+                <div className="w-full px-4 text-center md:text-left">
+                  <h5 className="text-lg font-semibold">Revisa y guarda</h5>
+                  <p className="text-sm text-gray-600">
                     Previsualiza tu menú para asegurarte de que todo esté
                     correcto y guárdalo.
                   </p>
                 </div>
                 <Image
-                  alt=""
+                  alt="Guardar"
                   height={90}
                   src="/img/guardar-el-archivo.png"
                   width={90}
                 />
               </div>
+
+              {/* Genera tu QR */}
               <div className="flex flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
-                <div className="w-full pl-6 pr-6">
-                  <h5>Genera tu QR</h5>
-                  <p>
+                <div className="w-full px-4 text-center md:text-left">
+                  <h5 className="text-lg font-semibold">Genera tu QR</h5>
+                  <p className="text-sm text-gray-600">
                     Obtén un código QR único para compartir tu menú con tus
                     clientes.
                   </p>
                 </div>
                 <Image
-                  alt=""
+                  alt="QR"
                   height={90}
                   src="/img/codigo-qr1.png"
                   width={90}
                 />
               </div>
             </div>
-            <div className="flex w-2/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
-              <div className="w-full pl-6 pr-6">
-                <h5>Comparte con tus clientes</h5>
-                <p>
+
+            {/* Paso final */}
+            <div className="flex w-full md:w-2/5 flex-col items-center justify-evenly rounded-three-corners bg-white p-4 shadow-xl">
+              <div className="w-full px-4 text-center md:text-left">
+                <h5 className="text-lg font-semibold">
+                  Comparte con tus clientes
+                </h5>
+                <p className="text-sm text-gray-600">
                   Coloca el QR en tus mesas, redes sociales o web. Tus clientes
                   podrán escanearlo y ver el menú al instante.
                 </p>
               </div>
-              <Image alt="" height={190} src="/img/codigo-qr.png" width={190} />
+              <Image
+                alt="Comparte"
+                height={190}
+                src="/img/codigo-qr.png"
+                width={190}
+              />
             </div>
           </div>
         </div>
       </div>
+
+      {/* SVG de abajo */}
       <div className="relative bottom-1">
         <svg
           fill="#4CAF50"

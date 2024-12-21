@@ -12,91 +12,124 @@ details {
   flex-direction: row;
   background: transparent;
   color: white;
-
   height: 30rem;
   border-radius: 2rem;
   overflow: hidden;
-
-  /* To make the image work …*/
   position: relative;
   z-index: 1;
+}
 
-  /* The image is tucked in the summary, because otherwise it would be hidden when not [open] as it ends up in the ::details-content pseudo */
-  summary img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    transition: filter 0.5s ease;
-    -webkit-transition: filter 0.5s ease;
-    -moz-transition: filter 0.5s ease;
-    -ms-transition: filter 0.5s ease;
-    -o-transition: filter 0.5s ease;
+details summary {
+  padding: 1rem 1em;
+  width: 7rem;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+details summary span {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 0.25);
+}
+
+details summary:focus {
+  outline: none;
+}
+
+details summary img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transition: filter 0.5s ease;
+}
+
+details[open] summary img {
+  filter: brightness(0.5);
+}
+
+details .details-content-wrapper {
+  padding: 2rem 1em;
+  width: 500px;
+}
+
+details:hover,
+details:has(summary:focus) {
+  outline: 3px solid #4caf50;
+  outline-offset: 3px;
+}
+
+.details-content-wrapper:first-child {
+  margin-top: 0;
+}
+
+.details-content-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.details-content-wrapper p {
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+details[open] .details-content-wrapper p {
+  transform: none;
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+section.w-full {
+  padding: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+@media (max-width: 1040px) {
+  .accordion-wrapper {
+    flex-direction: column;
+    width: 100%; /* Ocupa el ancho completo */
+    gap: 1rem;
   }
-  /* Animate the image */
-  &[open] summary img {
-    filter: brightness(0.5);
+  #demo {
+    width: 70%;
+  }
+  details {
+    flex-direction: column; /* Cambiar a columna */
+    height: auto; /* Altura automática */
   }
 
-  summary {
-    padding: 1rem 1em;
-    width: 7rem;
-    flex-shrink: 0; /* Prevent shrinking */
-    text-align: center;
-
-    span {
-      display: grid;
-      place-content: center;
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: rgb(0 0 0 / 0.25);
-    }
-
-    &:focus {
-      outline: none;
-    }
+  details summary {
+    width: 5rem; /* Ocupa todo el ancho en móviles */
   }
 
-  .details-content-wrapper {
-    padding: 2rem 1em;
-    width: 500px;
-  }
-
-  &:hover,
-  &:has(summary:focus) {
-    outline: 3px solid #4caf50;
-    outline-offset: 3px;
+  section.w-full {
+    padding: 0.5rem; /* Reducir el padding */
   }
 }
 
-.details-content-wrapper {
-  /* We need margin-trim … */
-  :first-child {
-    margin-top: 0;
+@media (max-width: 1154px) {
+  details summary {
+    width: 5rem;
+    flex-shrink: 0;
   }
-  :last-child {
-    margin-bottom: 0;
-  }
-
-  /* Animate-in the text when open */
-  p {
-    transform: translateY(2rem);
-    opacity: 0;
-    transition: all 0.5s ease;
-    transition-delay: 0.5s;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-  }
-
-  [open] & p {
-    transform: none;
-    opacity: 1;
-    transition-delay: 0.5s;
+  details summary span {
+    display: grid;
+    place-content: center;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 0.25);
   }
 }
